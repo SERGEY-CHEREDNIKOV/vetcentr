@@ -1,0 +1,26 @@
+.navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    font-family: "TTNorms-Medium";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #314357;
+    white-space: nowrap;
+    &__item {
+        padding: 0 14px;
+    }
+
+    &__item-link {
+        color: #314357;
+        transition: color 0.25s ease-in;
+    }
+    &__item-link:hover {
+        color: #00ab88;
+    }
+    &__item-link:active{
+        color: #00ab88;
+    }
+}
