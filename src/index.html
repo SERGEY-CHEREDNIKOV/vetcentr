@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ветеринарная клиника</title>
-
     <link href="css/style.css" rel="stylesheet">
+
 </head>
 
-<body> 
+<body>
 
     <header class="header">
         <div class="container">
             <div class="header__inner">
-                <a class="header__logo" href="#top" >
+                <a class="header__logo" href="#top">
                     <img src="img/logo.svg" alt="логотип ветеринарная клиника">
                 </a>
                 <ul class="header__navigation navigation">
@@ -23,20 +23,20 @@
                         <a class="navigation__item-link" href="#why_us">Почему мы</a>
                     </li>
                     <li class="navigation__item">
-                        <a class="navigation__item-link " href="#advantages" >Преимущества</a>
+                        <a class="navigation__item-link " href="#advantages">Преимущества</a>
                     </li>
                     <li class="navigation__item">
-                        <a class="navigation__item-link "href="#prices" >Стоимость</a>
+                        <a class="navigation__item-link " href="#prices">Стоимость</a>
                     </li>
                     <li class="navigation__item">
-                        <a class="navigation__item-link "href="#about" >О клинике</a>
+                        <a class="navigation__item-link " href="#about">О клинике</a>
                     </li>
                     <li class="navigation__item">
                         <a class="navigation__item-link " href="#contacts">Контакты</a>
                     </li>
                 </ul>
                 <div class="header__right">
-                    <a class="header__phone"  href="tel:8 812 660 - 77 - 80 " >8 812 660 77 80 </a>
+                    <a class="header__phone" href="tel:8 812 660 - 77 - 80 ">8 812 660 77 80 </a>
                     <a class="header__link">Записаться</a>
                 </div>
 
@@ -48,10 +48,121 @@
 
             </div>
         </div>
-
     </header>
 
+    <main class="main">
+        <section class="slider">
+            <!-- <div class="slider__arrows">
+                <div class="wrapper"></div>
+            </div> -->
 
+            <div class="slider__list swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="slider__item swiper-slide">
+                        <div class="slider__box-img">
+                            <img class="slider__img" src="img/bg-slider-01.jpg" alt="">
+                        </div>
+                        <div class="slider__wrapper">
+                            <div class="slider__inner">
+                                <h2 class="slider__title" data-swiper-parallax-opacity="0" data-swiper-parallax="-800">
+                                    Лапароскопическая
+                                </h2>
+                                <p class="slider__text" data-swiper-parallax-opacity="0" data-swiper-parallax="-800">
+                                    кастрация без боли, швов,
+                                    попон и разрезов
+                                </p>
+                                <a href="#popup-form" class="button infomodal" data-swiper-parallax-opacity="0"
+                                    data-swiper-parallax-y="-100">
+                                    Записаться
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="slider__item swiper-slide">
+                        <div class="slider__box-img">
+                            <img class="slider__img" src="img/bg-slider-02.jpg" alt="">
+                        </div>
+                        <div class="slider__wrapper">
+                            <div class="slider__inner">
+                                <h2 class="slider__title" data-swiper-parallax-opacity="0" data-swiper-parallax="-800">
+                                    Высококвалифицированные врачи в клинике на Турку
+                                </h2>
+                                <p class="slider__text" data-swiper-parallax-opacity="0" data-swiper-parallax="-800">
+                                </p>
+                                <a href="#about" class="button scroll" data-swiper-parallax-opacity="0"
+                                    data-swiper-parallax-y="-100">О нас</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="slider__item swiper-slide">
+                        <div class="slider__box-img">
+                            <img class="slider__img" src="img/bg-slider-03.jpg" alt="">
+                        </div>
+                        <div class="slider__wrapper">
+                            <div class="slider__inner">
+                                <h2 class="slider__title" data-swiper-parallax-opacity="0" data-swiper-parallax="-800">
+                                    Лапароскопическая кастрация кошек все включено
+                                </h2>
+                                <p class="slider__text--price-top" data-swiper-parallax-opacity="0"
+                                    data-swiper-parallax="-800">
+                                    9000 ₽
+                                </p>
+                                <a href="#popup-form" class="button infomodal" data-swiper-parallax-opacity="0"
+                                    data-swiper-parallax-y="-100">
+                                    Записаться
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider__item swiper-slide">
+                        <div class="slider__box-img">
+                            <img class="slider__img" src="img/bg-slider-04.jpg" alt="">
+                        </div>
+                        <div class="slider__wrapper">
+                            <div class="slider__inner">
+                                <h2 class="slider__title" data-swiper-parallax-opacity="0" data-swiper-parallax="-800">
+                                    Быстрая реабилитация животного
+                                </h2>
+                                <p class="slider__text" data-swiper-parallax-opacity="0" data-swiper-parallax="-800">
+                                    травматичность при лапароскопическом методе кастрации
+                                </p>
+                                <a href="#advantages" class="button scroll" data-swiper-parallax-opacity="0"
+                                    data-swiper-parallax-y="-100">Преимущества</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Slider main container
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+    <!-- <div class="swiper-wrapper"> -->
+    <!-- Slides -->
+    <!-- <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div> -->
+    <!-- ... -->
+    <!-- </div> -->
+    <!-- If we need pagination -->
+    <!-- <div class="swiper-pagination"></div> -->
+
+    <!-- If we need navigation buttons -->
+    <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+
+    <!-- If we need scrollbar -->
+    <!-- <div class="swiper-scrollbar"></div>
+    </div>  -->
 
     <script src="js/script.js"></script>
 </body>

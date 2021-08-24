@@ -1,17 +1,21 @@
+//  libraries
+
+@import "blocks/swiper-bundle";
 @import "normalize";
+
 @import "fonts";
 @import "variables";
 @import "mixins";
 @import "scaffolding";
 
-
-//  libraries
-
-
 //  blocks
 
-@import "blocks/header"; 
-@import "blocks/navigation"; 
-@import "blocks/hamburger"; 
+@import "blocks/header";
+@import "blocks/navigation";
+@import "blocks/hamburger";
+@import "blocks/slider-top";
+@import "blocks/button";
 
+// media
 
+@import "blocks/media";
