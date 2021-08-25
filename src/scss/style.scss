@@ -7,14 +7,16 @@
 @import "variables";
 @import "mixins";
 @import "scaffolding";
-
+ 
 //  blocks
 
+@import "blocks/title";
 @import "blocks/header";
 @import "blocks/navigation";
 @import "blocks/hamburger";
 @import "blocks/slider-top";
 @import "blocks/button";
+@import "blocks/why-us";
 
 // media
 
