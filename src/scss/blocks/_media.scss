@@ -58,7 +58,7 @@
         }
     }
 
-    .advantages { 
+    .advantages {
         padding: 25px 0;
         &__inner {
             margin: 0;
@@ -66,11 +66,28 @@
         &__list {
             margin: 0;
             width: 100%;
-
-        }  
+        }
         &__img-wrapper {
             margin: 0 auto;
             max-width: 570px;
+        }
+    }
+    .info-cat {
+        &__main {
+            padding: 25px 30px 30px 30px;
+        }
+        &__price {
+            font-size: 32px;
+            line-height: 36px;
+        }
+    }
+    .info-dog {
+        &__main {
+            padding: 25px 15px 30px 15px;
+        }
+        &__price {
+            font-size: 18px;
+            line-height: 24px;
         }
     }
 }
@@ -107,6 +124,44 @@
             font-weight: 700;
         }
     }
+    .info-cat {
+        &__main {
+            padding: 25px 15px 30px 15px;
+        }
+        &__title {
+            font-size: 16px;
+            line-height: 19px;
+        }
+        &__list-title {
+            font-size: 14px;
+            line-height: 18px;
+        }
+        &__list {
+            font-size: 14px;
+            line-height: 18px;
+
+            margin-bottom: 18px;
+        }
+        &__action {
+            flex-wrap: wrap;
+            text-align: center;
+            flex-direction: column;
+        }
+        &__price {
+            font-size: 18px;
+            line-height: 24px;
+
+            width: 100%;
+            padding-bottom: 20px;
+        }
+    }
+    .info-dog {
+        margin: 10px -10px;
+        &__wrapper {
+            display: flex;
+            width: 100%;
+        }
+    }
 }
 
 @media screen and (max-width: 639px) {
@@ -125,6 +180,21 @@
         &__card {
             margin-bottom: 30px;
             width: calc(100% - 30px);
+        }
+    }
+    .price {
+        padding: 25px 0 15px 0;        
+    }
+    .info-cat {
+        flex-direction: column;
+        max-width: 320px;
+        &__img-box {
+            width: 100%;
+            min-height: 180px;
+        }
+        &__main {
+            width: 100%;
+            padding: 15px;
         }
     }
 }
@@ -153,7 +223,10 @@
 
         padding: 15px 50px;
     }
-    .advantages { 
+    .button--md {
+        padding: 15px 30px;
+    }
+    .advantages {
         &__img-wrapper::after {
             display: none;
         }
@@ -163,24 +236,48 @@
         &__card-text {
             bottom: 15px;
             left: 10px;
-    
+
             font-family: "TTNorms-Bold";
             font-weight: 700;
             font-size: 13px;
             line-height: 15px;
             color: #fff;
-    
+
             padding: 0px 15px;
         }
         &__item-title {
             font-size: 16px;
         }
-    
+
         &__item-text {
             font-size: 16px;
             line-height: 20px;
-    
+
             margin-bottom: 30px;
+        }
+    }
+    .tabs {
+        &__triggers-item {
+            font-size: 0px;
+            
+            width: 139px;
+            margin: 0 2px;
+        }
+        &__triggers-item--cat::before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &__triggers-item--dog::before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .info-dog {
+        max-width: 320px;
+        margin: 0 auto;
+        &__wrapper {
+            flex-direction: column;
+            margin: 0px 0px 10px 0px;
         }
     }
 }

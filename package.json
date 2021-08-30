@@ -19,6 +19,7 @@
     "core-js": "^3.16.2",
     "cssnano": "^5.0.8",
     "del": "^6.0.0",
+    "exports-loader": "^3.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-cssbeautify": "^3.0.0",
@@ -35,6 +36,7 @@
     "webpack-stream": "^6.1.2"
   },
   "dependencies": {
-    "swiper": "^6.8.4"
+    "swiper": "^6.8.4",
+    "wow.js": "^1.2.2"
   }
 }

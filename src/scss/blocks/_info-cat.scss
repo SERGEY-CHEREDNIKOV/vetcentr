@@ -1,0 +1,92 @@
+.info-cat {
+    display: flex;
+
+    max-width: 770px;
+    margin: 0 auto;
+
+    background: #ffffff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 15px;
+    overflow: hidden;
+
+    &__img-box {
+        min-height: 330px;
+        width: 300px;
+    }
+
+    &__img {
+        max-width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    &__main {
+        padding: 45px 50px 50px 50px;
+        width: calc(100% - 300px);
+    }
+
+    &__title {
+        font-family: "TTNorms-Bold";
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+
+        padding-bottom: 10px;
+        border-bottom: 1px dashed #00ab88;
+        margin-bottom: 15px;
+    }
+
+    &__list-title {
+        font-family: "TTNorms-Bold";
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+
+        margin-bottom: 10px;
+    }
+
+    &__list {
+        font-family: "TTNorms-Medium";
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+
+        margin-bottom: 35px;
+    }
+
+    &__item {
+        position: relative;
+
+        padding-left: 30px;
+        margin-bottom: 10px;
+    }
+    &__item::before {
+        content: "";
+        position: absolute;
+        top: 1px;
+        left: 0;
+
+        width: 18px;
+        height: 18px;
+
+        background: url("../img/checkmark.svg") no-repeat;
+        background-size: 18px 18px;
+    }
+
+    &__action {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__price {
+        font-family: "TTNorms-Bold";
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+    }
+    &__price span {
+        color: #00ab88;
+    }
+}

@@ -1,0 +1,70 @@
+.tabs {
+    &__triggers {
+        margin-bottom: 30px;
+
+        text-align: center;
+    }
+
+    &__triggers-item {
+        position: relative;
+
+        display: inline-block;
+        width: 200px;
+        height: 65px;
+        margin: 0 10px;
+
+        background: #ffffff;
+        box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+        border-radius: 55px;
+
+        vertical-align: middle;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        cursor: pointer;
+        line-height: 65px;
+
+        transition: all 0.2s linear;
+    }
+    &__triggers-item:hover {
+        background: #00ab88;
+        color: #fff;
+    }
+
+    &__triggers-item.tabs__triggers-item--active {
+        background: #00ab88;
+        color: #fff;
+    }
+
+    &__triggers-item--cat::before {
+        content: "";
+        position: absolute;
+        left: 20px;
+        top: 12px;
+
+        width: 40px;
+        height: 40px;
+
+        background-image: url("../img/cat.svg");
+        background-repeat: no-repeat;
+    }
+    &__triggers-item--dog::before {
+        content: "";
+        position: absolute;
+        left: 20px;
+        top: 12px;
+
+        width: 40px;
+        height: 40px;
+
+        background-image: url("../img/dog.svg");
+        background-repeat: no-repeat;
+    }
+    &__content-item {
+        display: none;
+    }
+    &__content-item.tabs__content-item--active {
+        display: block;
+    }
+}
