@@ -1,0 +1,110 @@
+.about {
+    background: #f0f7ff;
+    &__container {
+        padding: 0 0 0 15px;
+    }
+    &__title {
+    }
+    &__slider {
+    }
+
+    &__slide {
+    }
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__box-text {
+        padding: 50px 5px 50px 0px;
+        width: 50%;
+    }
+
+    &__text {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 25px;
+        padding-bottom: 15px;
+    }
+    &__text:last-child  {
+        padding-bottom: 0px;
+    }
+
+    &__list {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        opacity: 0.7;
+        margin-bottom: 15px;
+    }
+
+    &__item {
+        position: relative;
+        padding-left: 15px;
+        margin-bottom: 10px;
+    }
+    &__item:last-child {
+        margin-bottom: 0px;
+    }
+    &__item::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        background: #00ab88;
+        box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+        border-radius: 55px;
+        position: absolute;
+        top: 6px;
+        left: 0;
+    }
+
+    &__box-img {
+        height: 485px;
+        width: 680px;
+        padding: 0 2px 0 0;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+    &__button-box {
+        position: relative;
+        z-index: 1;
+        left: 50%;
+        bottom: 50px;
+        width: 75px;
+        margin-left: -190px;
+    }
+    &__button-prev {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        left: 0;
+        top: 0;
+        background-image: url(../../img/arrow-left-green.svg);
+        cursor: pointer;
+        opacity: 0.5;
+        transition: all 0.3s linear;
+    }
+    &__button-prev:hover {
+        opacity: 1;
+    }
+    &__button-next {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        right: 0;
+        top: 0;
+        background-image: url(../../img/arrow-right-green.svg);
+        cursor: pointer;
+        opacity: 0.5;
+        transition: all 0.3s linear;
+    }
+    &__button-next:hover {
+        opacity: 1;
+    }
+}
+

@@ -162,6 +162,26 @@
             width: 100%;
         }
     }
+    .about {
+        &__container {
+            padding: 0;
+        }
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__box-text {
+            width: 97%;
+            padding: 30px 15px;
+        }
+        &__box-img {
+            height: 400px;
+            width: 100%;
+            padding: 0px;
+        }
+        &__button-box {
+            display: none;
+        }
+    }
 }
 
 @media screen and (max-width: 639px) {
@@ -183,7 +203,7 @@
         }
     }
     .price {
-        padding: 25px 0 15px 0;        
+        padding: 25px 0 15px 0;
     }
     .info-cat {
         flex-direction: column;
@@ -259,7 +279,7 @@
     .tabs {
         &__triggers-item {
             font-size: 0px;
-            
+
             width: 139px;
             margin: 0 2px;
         }
@@ -278,6 +298,11 @@
         &__wrapper {
             flex-direction: column;
             margin: 0px 0px 10px 0px;
+        }
+    }
+    .about {
+        &__box-img {
+            height: 300px;
         }
     }
 }
