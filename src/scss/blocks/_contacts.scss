@@ -1,0 +1,77 @@
+.contacts {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    background: #f0f7ff;
+    &__left {
+        padding: 80px 0 80px;
+        width: 50%;
+        position: relative;
+    }
+
+    &__wrapper {
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 15px 0 45px;
+        margin: auto auto auto 0;
+        position: relative;
+    }
+
+    &__list {
+    }
+
+    &__item {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 23px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    &__item:before {
+        content: "";
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        background: no-repeat center center;
+        background-size: contain;
+        top: 0;
+        left: 0;
+    }
+    &__item--schedule {
+        margin-bottom: 0;
+    }
+
+    &__item--phone::before {
+        background-image: url("../img/phone-2.svg");
+    }
+
+    &__item--address::before {
+        background-image: url("../img/address.svg");
+    }
+
+    &__item--schedule::before {
+        background-image: url("../img/schedule.svg");
+    }
+
+    &__link {
+        font-family: "TTNorms-Medium";
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #314357;
+        transition: all 0.2s ease-in;
+    }
+    &__link:hover {
+        color: #00ab88;
+    }
+    &__right {
+        width: 50%;
+    }
+
+    &__map {
+        height: 565px;
+        width: 100%;
+    }
+}
