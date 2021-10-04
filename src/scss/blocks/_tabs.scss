@@ -4,7 +4,6 @@
 
         text-align: center;
     }
-
     &__triggers-item {
         position: relative;
 
@@ -66,5 +65,37 @@
     }
     &__content-item.tabs__content-item--active {
         display: block;
+    }
+    &__content-item--active {
+        animation-name: faded;
+        animation-duration: 1.5s;
+    }
+}
+
+@keyframes faded {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .tabs {
+        &__triggers-item {
+            font-size: 0px;
+
+            width: 139px;
+            margin: 0 2px;
+        }
+        &__triggers-item--cat::before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &__triggers-item--dog::before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 }

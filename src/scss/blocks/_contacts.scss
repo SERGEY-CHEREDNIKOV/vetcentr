@@ -2,28 +2,28 @@
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
+
     background: #f0f7ff;
     &__left {
+        position: relative;
+
         padding: 80px 0 80px;
         width: 50%;
-        position: relative;
     }
-
     &__wrapper {
+        position: relative;
+
         width: 100%;
         max-width: 1200px;
         padding: 0 15px 0 45px;
         margin: auto auto auto 0;
-        position: relative;
     }
-
-    &__list {
-    }
-
     &__item {
         position: relative;
+
         padding-left: 30px;
         margin-bottom: 23px;
+
         font-weight: 500;
         font-size: 16px;
         line-height: 19px;
@@ -32,12 +32,14 @@
     &__item:before {
         content: "";
         position: absolute;
-        width: 18px;
-        height: 18px;
-        background: no-repeat center center;
-        background-size: contain;
         top: 0;
         left: 0;
+
+        width: 18px;
+        height: 18px;
+
+        background: no-repeat center center;
+        background-size: contain;
     }
     &__item--schedule {
         margin-bottom: 0;
@@ -75,3 +77,37 @@
         width: 100%;
     }
 }
+
+@media screen and (max-width: 991px) {
+    .contacts {
+        &__map {
+            height: 500px;
+        }
+    }
+}
+@media screen and (max-width: 740px) {
+    .contacts {
+        flex-direction: column;
+        &__left {
+            width: 100%;
+            padding: 30px 0 30px;
+        }
+        &__wrapper {
+            padding: 0 15px 0 15px;
+        }
+        &__right {
+            width: 100%;
+        }
+        &__map {
+            height: 400px;
+        }
+    }
+}
+@media screen and (max-width: 639px) {
+    .contacts {
+        &__map {
+            height: 300px;
+        }
+    }
+}
+

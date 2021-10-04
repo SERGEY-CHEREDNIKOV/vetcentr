@@ -1,7 +1,14 @@
 import Swiper from 'swiper/bundle';
 import WOW from 'wow.js/dist/wow.js';
+import "../../node_modules/just-validate/dist/js/just-validate.js"
+
 import toSwitchTabs from "./modules/tabs";
-import a from "./modules/test";
+import scrolling from './modules/scrolling';
+import modals from './modules/modals';
+import burger from './modules/burger';
+import map from './modules/map';
+import maskPhone from './modules/maskPhone';
+import validateForms from './modules/validateForms';
 
 window.addEventListener('load', function () {
 
@@ -47,14 +54,17 @@ window.addEventListener('load', function () {
         },
         speed: 1000,
         loop: true,
-        autoHeight: true,
+        // autoHeight: true,
     });
 
     new WOW().init();
-
     toSwitchTabs('.tabs__triggers-item', '.tabs__content-item', 'tabs__triggers-item--active', 'tabs__content-item--active');
+    scrolling();
+    modals();
+    burger();
+    map();
+    maskPhone();
+    validateForms('.form__form', '');
+    validateForms('.form__form--popup', '');
 
-    a();
-
-    console.log('test main');
 });

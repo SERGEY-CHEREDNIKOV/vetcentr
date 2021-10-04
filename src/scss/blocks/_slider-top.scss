@@ -6,7 +6,7 @@
         position: relative;
         z-index: 9;
 
-        height: 703px;
+        height: 800px;
     }
     &__box-img::before {
         content: "";
@@ -21,7 +21,7 @@
     }
     &__img {
         width: 100vw;
-        height: 703px;
+        height: 800px;
 
         object-fit: cover;
     }
@@ -78,5 +78,96 @@
 
         background: #ff6868;
         box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .slider {
+        &__box-img {
+            height: 550px;
+        }
+        &__img {
+            height: 550px;
+        }
+        &__title {
+            font-size: 44px;
+            line-height: 52px;
+        }
+
+        &__text {
+            font-size: 28px;
+            line-height: 32px;
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .slider {
+        &__inner {
+            padding: 0;
+        }
+
+        &__title {
+            font-size: 36px;
+            line-height: 44px;
+        }
+
+        &__text {
+            font-size: 24px;
+            line-height: 28px;
+
+            margin-bottom: 30px;
+        }
+
+        &__text--price-top {
+            font-size: 28px;
+            line-height: 36px;
+        }
+    }
+}
+@media screen and (max-width: 740px) {
+    .slider {
+        &__box-img {
+            height: 400px;
+        }
+        &__img {
+            height: 400px;
+        }
+        &__title {
+            font-size: 30px;
+            line-height: 36px;
+            font-weight: 700;
+        }
+        &__text {
+            font-size: 20px;
+            line-height: 24px;
+
+            margin-bottom: 30px;
+        }
+
+        &__text--price-top {
+            font-size: 20px;
+            line-height: 34px;
+            font-weight: 700;
+        }
+    }
+}
+@media screen and (max-width: 479px) {
+    .slider {
+        &__inner {
+            left: 15px;
+        }
+        &__title {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        &__text {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        &__text--price-top {
+            font-size: 16px;
+            line-height: 20px;
+        }
     }
 }

@@ -11,36 +11,32 @@
         flex-wrap: wrap;
         margin: 0 -15px;
     }
-
     &__list {
         margin: 0 15px;
         width: calc(50% - 30px);
+        overflow-x: hidden;
     }  
-
     &__item {
         display: flex;
         position: relative;
     }
-
     &__item-icon {
         position: absolute;
         top: 0;
         left: 0;
     }
-
     &__box-text {
         padding-left: 80px;
     }
-
     &__item-title {
         font-family: "TTNorms-Black";
         font-weight: 900;
         font-size: 18px;
         line-height: 20px;
         color: #314357;
+
         margin-bottom: 5px;
     }
-
     &__item-text {
         font-family: "TTNorms-Medium";
         font-weight: 500;
@@ -50,7 +46,6 @@
 
         margin-bottom: 40px;
     }
-
     &__img-wrapper {
         position: relative;
 
@@ -66,24 +61,28 @@
         position: absolute;
         right: 50px;
         top: 50%;
-        margin-top: 6px;
-        background: #00ab88;
-        height: 6px;
-        border-radius: 6px;
         z-index: 2;
+        
         width: 50px;
+        height: 6px;
+        margin-top: 6px;
+
+        background: #00ab88;
+        border-radius: 6px;
     }
     &__img-wrapper::before {
         content: "";
         position: absolute;
         left: 50px;
         top: 50%;
-        margin-top: 6px;
-        background: #00ab88;
-        height: 6px;
-        border-radius: 6px;
         z-index: 2;
+        
         width: 50px;
+        height: 6px;
+        margin-top: 6px;
+
+        background: #00ab88;
+        border-radius: 6px;
     }
 
     &__img-icon {
@@ -91,6 +90,7 @@
         z-index: 2;
         top: 50%;
         left: 50%;
+
         width: 55px;
         height: 55px;
         transform: translateX(-50%) translateY(-50%);
@@ -98,21 +98,12 @@
         background-repeat: no-repeat;
         background-size: contain;
     }
-
-    &__img-top {
-    }
-
     &__img-inner {
         display: flex;
     }
-
     &__card {
         position: relative;
     }
-
-    &__card-box {
-    }
-
     &__card-text {
         position: absolute;
         bottom: 30px;
@@ -125,5 +116,53 @@
         color: #fff;
 
         padding: 0 25px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .advantages {
+        padding: 25px 0;
+        &__inner {
+            margin: 0;
+        }
+        &__list {
+            margin: 0;
+            width: 100%;
+        }
+        &__img-wrapper {
+            margin: 0 auto;
+            max-width: 570px;
+        }
+    }
+}
+@media screen and (max-width: 479px) {
+    .advantages {
+        &__img-wrapper::after {
+            display: none;
+        }
+        &__img-wrapper::before {
+            display: none;
+        }
+        &__card-text {
+            bottom: 15px;
+            left: 10px;
+
+            font-family: "TTNorms-Bold";
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 15px;
+            color: #fff;
+
+            padding: 0px 15px;
+        }
+        &__item-title {
+            font-size: 16px;
+        }
+        &__item-text {
+            font-size: 16px;
+            line-height: 20px;
+
+            margin-bottom: 30px;
+        }
     }
 }

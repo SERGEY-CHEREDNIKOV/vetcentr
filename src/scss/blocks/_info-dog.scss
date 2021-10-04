@@ -97,3 +97,34 @@
         color: #00ab88;
     }
 }
+
+@media screen and (max-width: 991px) {
+    .info-dog {
+        &__main {
+            padding: 25px 15px 30px 15px;
+        }
+        &__price {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+}
+@media screen and (max-width: 740px) {
+    .info-dog {
+        margin: 10px -10px;
+        &__wrapper {
+            display: flex;
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 479px) {
+    .info-dog {
+        max-width: 320px;
+        margin: 0 auto;
+        &__wrapper {
+            flex-direction: column;
+            margin: 0px 0px 10px 0px;
+        }
+    }
+}

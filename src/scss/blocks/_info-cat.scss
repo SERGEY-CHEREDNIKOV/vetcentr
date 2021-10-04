@@ -90,3 +90,63 @@
         color: #00ab88;
     }
 }
+
+@media screen and (max-width: 991px) {
+    .info-cat {
+        &__main {
+            padding: 25px 30px 30px 30px;
+        }
+        &__price {
+            font-size: 32px;
+            line-height: 36px;
+        }
+    }
+}
+@media screen and (max-width: 740px) {
+    .info-cat {
+        &__main {
+            padding: 25px 15px 30px 15px;
+        }
+        &__title {
+            font-size: 16px;
+            line-height: 19px;
+        }
+        &__list-title {
+            font-size: 14px;
+            line-height: 18px;
+        }
+        &__list {
+            font-size: 14px;
+            line-height: 18px;
+
+            margin-bottom: 18px;
+        }
+        &__action {
+            flex-wrap: wrap;
+            text-align: center;
+            flex-direction: column;
+        }
+        &__price {
+            font-size: 18px;
+            line-height: 24px;
+
+            width: 100%;
+            padding-bottom: 20px;
+        }
+    }
+}
+@media screen and (max-width: 639px) {
+    .info-cat {
+        flex-direction: column;
+        max-width: 320px;
+        &__img-box {
+            width: 100%;
+            min-height: 180px;
+        }
+        &__main {
+            width: 100%;
+            padding: 15px;
+        }
+    }
+}
+

@@ -6,45 +6,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ветеринарная клиника</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
 
 </head>
 
 <body>
 
-    <header class="header">
+    <header class="header  lock-padding">
         <div class="container">
             <div class="header__inner">
-                <a class="header__logo" href="#top">
+                <a class="header__logo" href="#">
                     <img src="img/logo.svg" alt="логотип ветеринарная клиника">
                 </a>
                 <ul class="header__navigation navigation">
                     <li class="navigation__item">
-                        <a class="navigation__item-link" href="#why_us">Почему мы</a>
+                        <a class="navigation__item-link" data-goto=".section__why-us" href="#">Почему мы</a>
                     </li>
                     <li class="navigation__item">
-                        <a class="navigation__item-link " href="#advantages">Преимущества</a>
+                        <a class="navigation__item-link" data-goto=".section__advantages" href="#">Преимущества</a>
                     </li>
                     <li class="navigation__item">
-                        <a class="navigation__item-link " href="#prices">Стоимость</a>
+                        <a class="navigation__item-link" data-goto=".section__prices" href="#">Стоимость</a>
                     </li>
                     <li class="navigation__item">
-                        <a class="navigation__item-link " href="#about">О клинике</a>
+                        <a class="navigation__item-link" data-goto=".section__about" href="#">О клинике</a>
                     </li>
                     <li class="navigation__item">
-                        <a class="navigation__item-link " href="#contacts">Контакты</a>
+                        <a class="navigation__item-link" data-goto=".section__contacts" href="#">Контакты</a>
+                    </li>
+                    <li class="navigation__item  navigation__item--mobile">
+                        <div class="header__right  header__right--mobile-menu">
+                            <a class="header__phone" href="tel:88107707734">8 810 770 77 34</a>
+                            <a class="header__link popup--open">Записаться</a>
+                        </div>
                     </li>
                 </ul>
                 <div class="header__right">
                     <a class="header__phone" href="tel:88107707734">8 810 770 77 34</a>
-                    <a class="header__link">Записаться</a>
+                    <a class="header__link popup--open">Записаться</a>
                 </div>
 
-                <button class="hamburger">
-                    <div class="hamburger__line"></div>
-                    <div class="hamburger__line"></div>
-                    <div class="hamburger__line"></div>
-                </button>
+                <div class="burger burger--trigger">
+                    <span class="burger__line  burger__line--first"></span>
+                    <span class="burger__line  burger__line--second"></span>
+                    <span class="burger__line  burger__line--third"></span>
+                    <span class="burger__line  burger__line--fourth"></span>
+                </div>
+
+
 
             </div>
         </div>
@@ -67,8 +76,8 @@
                                     кастрация без боли, швов,
                                     попон и разрезов
                                 </p>
-                                <a href="#popup-form" class="button infomodal" data-swiper-parallax-opacity="0"
-                                    data-swiper-parallax-y="-100">
+                                <a class="button popup--open" data-swiper-parallax-opacity="0"
+                                    data-swiper-parallax-y="-100" href="#">
                                     Записаться
                                 </a>
                             </div>
@@ -87,8 +96,9 @@
                                 </h2>
                                 <p class="slider__text" data-swiper-parallax-opacity="0" data-swiper-parallax="-800">
                                 </p>
-                                <a href="#about" class="button scroll" data-swiper-parallax-opacity="0"
-                                    data-swiper-parallax-y="-100">О нас</a>
+                                <a class="button scroll" data-goto=".section__about" data-swiper-parallax-opacity="0"
+                                    data-swiper-parallax-y="-100" href="#">О
+                                    нас</a>
                             </div>
                         </div>
 
@@ -107,8 +117,8 @@
                                     data-swiper-parallax="-800">
                                     9000 ₽
                                 </p>
-                                <a href="#popup-form" class="button infomodal" data-swiper-parallax-opacity="0"
-                                    data-swiper-parallax-y="-100">
+                                <a href="#popup-form" class="button infomodal popup--open"
+                                    data-swiper-parallax-opacity="0" data-swiper-parallax-y="-100">
                                     Записаться
                                 </a>
                             </div>
@@ -127,7 +137,8 @@
                                 <p class="slider__text" data-swiper-parallax-opacity="0" data-swiper-parallax="-800">
                                     травматичность при лапароскопическом методе кастрации
                                 </p>
-                                <a href="#advantages" class="button scroll" data-swiper-parallax-opacity="0"
+                                <a class="button scroll" data-swiper-parallax-opacity="0"
+                                    data-goto=".section__advantages" href="#"
                                     data-swiper-parallax-y="-100">Преимущества</a>
                             </div>
                         </div>
@@ -136,7 +147,7 @@
             </div>
         </section>
 
-        <section class="why-us" id="why_us">
+        <section class="why-us  section__why-us">
             <div class="container">
                 <h2 class="title">Почему мы?</h2>
                 <div class="why-us__inner">
@@ -168,7 +179,7 @@
             </div>
         </section>
 
-        <section class="advantages" id="advantages">
+        <section class="advantages  section__advantages">
             <div class="container">
                 <h2 class="title">Лапароскопическая и классическая кастрация, в чем разница?</h2>
                 <div class="advantages__inner">
@@ -280,10 +291,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> 
         </section>
 
-        <section class="price" id="prices">
+        <section class="price  section__prices">
             <div class="container">
                 <h2 class="title">
                     Стоимость
@@ -296,8 +307,12 @@
                 <div class="price__tabs  tabs">
                     <div class="tabs__triggers">
                         <a class="tabs__triggers-item  tabs__triggers-item--cat tabs__triggers-item--active"
-                            href="#tab-1">Кошка</a>
-                        <a class="tabs__triggers-item  tabs__triggers-item--dog " href="#tab-2">Собака</a>
+                            href="#tab-1">
+                            Кошка
+                        </a>
+                        <a class="tabs__triggers-item  tabs__triggers-item--dog " href="#tab-2">
+                            Собака
+                        </a>
                     </div>
 
                     <div class="tabs__content">
@@ -317,7 +332,7 @@
                                     </ul>
                                     <div class="info-cat__action">
                                         <div class="info-cat__price">9000 <span>₽</span></div>
-                                        <a class="button button--md  modal--active" href="#popup-form">
+                                        <a class="button button--md  popup--open">
                                             Записаться
                                         </a>
                                     </div>
@@ -340,7 +355,7 @@
                                             анестезиолога, расходные материалы и медикаменты</p>
                                         <div class="info-dog__action">
                                             <div class="info-dog__price">11 300<span>₽</span></div>
-                                            <a class="button button--md  modal--active" href="#popup-form">
+                                            <a class="button button--md  popup--open">
                                                 Записаться
                                             </a>
                                         </div>
@@ -361,7 +376,7 @@
                                         <div class="info-dog__action">
                                             <div class="info-dog__price">15 300<span>₽</span> - 18
                                                 300<span>₽</span></div>
-                                            <a class="button button--md  modal--active" href="#popup-form">
+                                            <a class="button button--md  popup--open">
                                                 Записаться
                                             </a>
                                         </div>
@@ -382,7 +397,7 @@
                                         <div class="info-dog__action">
                                             <div class="info-dog__price">18 300<span>₽</span> - 21
                                                 300<span>₽</span></div>
-                                            <a class="button button--md  modal--active" href="#popup-form">
+                                            <a class="button button--md  popup--open">
                                                 Записаться
                                             </a>
                                         </div>
@@ -394,10 +409,9 @@
                     </div>
                 </div>
             </div>
-            </div>
         </section>
 
-        <section class="about" id="about">
+        <section class="about  section__about">
             <div class="about__container container">
                 <div class="about__slider swiper-container">
 
@@ -476,7 +490,7 @@
             </div>
         </section>
 
-        <section class="contacts" id="contacts">
+        <section class="contacts  section__contacts">
             <div class="contacts__left">
                 <div class="contacts__wrapper">
                     <h2 class="title">Контакты</h2>
@@ -493,8 +507,6 @@
             </div>
             <div class="contacts__right">
                 <div class="contacts__map" id="map">
-                    <script type="text/javascript" charset="utf-8" async
-                        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A03a2f2586e6dee8e2bb7b279e5473b8c6b92b18647454c2d439b5e4f5503e58d&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
                 </div>
             </div>
         </section>
@@ -505,38 +517,41 @@
                     <div class="appointment__form-bg">
                         <div class="appointment__form  form">
                             <h2 class="title title--sm">Запись на лапароскопическую кастрацию</h2>
-                            <form action="" method="post" class="" novalidate="novalidate">
+                            <form class="form__form" enctype="multipart/form-data" action="#" method="post">
+                                <!-- <input type="hidden" name="admin_email[]" value="serezha.ros@mail.ru"> -->
+                                <input type="hidden" name="form_subjaect" value="Тема письма">
                                 <div class="form__wrapper">
                                     <div class="form__inner">
-                                        <label class="form__label">Ваше имя<span>*</span></label>
-                                        <input type="text" name="text" value size="40"
-                                            class="form__input form__input--name" placeholder="Ваше имя">
+                                        <label class="form__label" for="userName">Ваше имя<span>*</span></label>
+                                        <input type="text" name="user_name" id="userName"
+                                            class="form__input form__input--name" placeholder="Ваше имя"
+                                            data-validate-field="name">
                                     </div>
                                     <div class="form__inner">
-                                        <label class="form__label">Ваш телефон<span>*</span></label>
-                                        <input type="tel" name="tel" value size="40"
+                                        <label class="form__label" for="userTel">Ваш телефон<span>*</span></label>
+                                        <input type="tel" name="user_phone" id="userTel"
                                             class="form__input form__input--phone "
-                                            placeholder="+7 (_ _ _) _ _ _ - _ _ - _ _">
+                                            placeholder="+7 (_ _ _) _ _ _-_ _-_ _" maxlength="18"
+                                            data-validate-field="tel">
 
                                     </div>
                                     <div class="form__inner">
-                                        <button class="button" type="submit"">
+                                        <button class="button" type="submit">
                                             Записаться
                                         </button>
                                     </div>
                                 </div>
                             </form>
 
-                            <p class="form__politica">
-                                Нажимая на кнопку отправить Вы соглашаетесь c
-                                <a href="/file.pdf" target="_blank">
-                                    политикой конфиденциальности
-                                </a>
+                            <p class=" form__politica">Нажимая на кнопку отправить Вы соглашаетесь c
+                                <a href="/file.pdf">политикой конфиденциальности</a>
                             </p>
+
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="appointment__right">
                 <img class="appointment__img" src="img/appointment.jpg" alt="">
             </div>
@@ -544,27 +559,111 @@
 
     </main>
 
-    <!-- Slider main container
-    <div class="swiper-container">
-        <!-- Additional required wrapper -->
-    <!-- <div class="swiper-wrapper"> -->
-    <!-- Slides -->
-    <!-- <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div> -->
-    <!-- ... -->
-    <!-- </div> -->
-    <!-- If we need pagination -->
-    <!-- <div class="swiper-pagination"></div> -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <a class="footer__logo" href="#">
+                    <img src="img/logo-footer.svg" alt>
+                </a>
+                <ul class="footer__navigation-list">
+                    <li class="footer__navigation-item">
+                        <a class="footer__navigation-link" data-goto=".section__why-us" href="#">Почему мы</a>
+                    </li>
+                    <li class="footer__navigation-item">
+                        <a class="footer__navigation-link" data-goto=".section__advantages" href="#">Преимущества</a>
+                    </li>
+                    <li class="footer__navigation-item">
+                        <a class="footer__navigation-link" data-goto=".section__prices" href="#">Стоимость</a>
+                    </li>
+                    <li class="footer__navigation-item">
+                        <a class="footer__navigation-link" data-goto=".section__about" href="#">О клинике</a>
+                    </li>
+                    <li class="footer__navigation-item">
+                        <a class="footer__navigation-link" data-goto=".section__contacts" href="#">Контакты</a>
+                    </li>
+                </ul>
 
-    <!-- If we need navigation buttons -->
-    <!-- <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div> -->
+                <ul class="footer__contacts">
+                    <li class="footer__contacts-item  footer__contacts-item--phone">
+                        <a class="footer__contacts-number" href="tel:88107707734">
+                            8 810 770 - 77 - 34</a>
+                    </li>
+                    <li class="footer__contacts-item  footer__contacts-item--address">г. Санкт-Петербург, улица Турку д.
+                        11 к. 2.
+                    </li>
+                    <li class="footer__contacts-item  footer__contacts-item--schedule">График работы: 24 часа</li>
+                </ul>
+            </div>
+            <div class="footer__wrapper">
+                <ul class="footer__social">
+                    <li class="footer__social-item">
+                        <a href="#" class="footer__social-link">
+                            <img src="img/instagram.svg" alt="инстаграм">
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="#" class="footer__social-link">
+                            <img src="img/vk.svg" alt="вконтатке">
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="#" class="footer__social-link">
+                            <img src="img/earth.svg" alt="дополнительный сайт">
+                        </a>
+                    </li>
+                </ul>
+                <div class="footer__copy">2021 © Городской ветеринарный лечебно-диагностический центр №1</div>
+            </div>
+        </div>
+    </footer>
 
-    <!-- If we need scrollbar -->
-    <!-- <div class="swiper-scrollbar"></div>
-    </div>  -->
 
+
+    <div class="popup  lock-padding">
+        <div class="popup__content form">
+            <button class="popup__close  popup--close  form__modal-close form__modal--close">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22"
+                    height="22" x="0px" y="0px" viewBox="0 0 512.001 512.001"
+                    style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+			                        L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+			                        c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+			                        l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+			                        L284.286,256.002z" />
+                        </g>
+                    </g>
+                </svg>
+            </button>
+            <h2 class="title title--sm">Запись на лапароскопическую кастрацию</h2>
+            <form class="form__form  form__form--popup" action="#" method="post">
+                <div class="form__wrapper">
+                    <div class="form__inner">
+                        <label class="form__label" for="userName-2">Ваше имя<span>*</span></label>
+                        <input type="text" name="user_name" id="userName-2" class="form__input form__input--name"
+                            placeholder="Ваше имя" data-validate-field="name">
+                    </div>
+                    <div class="form__inner">
+                        <label class="form__label" for="userTel-2">Ваш телефон<span>*</span></label>
+                        <input type="tel" name="user_phone" id="userTel-2"
+                            class="form__input form__input--phone form__input--popup"
+                            placeholder="+7 (_ _ _) _ _ _-_ _-_ _" maxlength="18" data-validate-field="tel">
+                    </div>
+                    <div class="form__inner">
+                        <button class="button" type="submit">
+                            Записаться
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <p class=" form__politica">Нажимая на кнопку отправить Вы соглашаетесь c <a href="/file.pdf"
+                    target="_blank">политикой конфиденциальности</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=f1d41b39-fbe8-435a-8017-aa71e433d82b&lang=ru_RU'"></script>
     <script src="js/script.js"></script>
 </body>
 

@@ -17,19 +17,22 @@ import browsersync from 'browser-sync';
 
 const sass = gulpSass(compiler);
 
+let dist = 'dist'; // 'dist' || 'C:/openserver/domains/localhost-newsite.ru'
 
 /* Paths */
 let path = {
   dist: {
-    html: "dist/",
-    js: "dist/js/",
-    css: "dist/css/",
-    images: "dist/img/",
-    fonts: "dist/fonts/"
+    html: `${dist}`,
+    js: `${dist}/js/`,
+    php: `${dist}/php/`,
+    css: `${dist}/css/`,
+    images: `${dist}/img/`,
+    fonts: `${dist}/fonts/`
   },
   src: {
     html: "src/*.html",
     js: "src/js/*.js",
+    php: "src/php/*.php",
     css: "src/scss/style.scss",
     images: "src/img/**/*.{jpg,png,svg,gif,ico}",
     fonts: "src/fonts/*.{woff,woff2}"
@@ -37,17 +40,19 @@ let path = {
   watch: {
     html: "src/**/*.html",
     js: "src/js/**/*.js",
+    php: "src/php/*.php",
     css: "src/scss/**/*.scss",
     images: "src/img/**/*.{jpg,png,svg,gif,ico}",
     fonts: "src/fonts/*.{woff,woff2}",
   },
-  clean: "./dist"
+  // clean: `${dist}`
+  clean: `dist`
 }
 
 export const browserSync = () => {
   browsersync.init({
     server: {
-      baseDir: "./dist/"
+      baseDir: `${dist}`
     },
     port: 3000
   });
@@ -87,7 +92,7 @@ export const css = () => {
       suffix: ".min",
       extname: ".css"
     }))
-    .pipe(gulp.dest('dist/css/'))
+    .pipe(gulp.dest(path.dist.css))
     .pipe(browsersync.stream());
 }
 
@@ -124,6 +129,13 @@ export const buildJs = () => {
     .on("end", browsersync.reload);
 }
 
+export const php = () => {
+  return gulp.src(path.src.php)
+    .pipe(gulp.dest(path.dist.php))
+    .pipe(browsersync.stream());
+
+}
+
 export const buildProdJs = () => {
   return gulp.src(path.src.js, { base: './src/js/' })
     .pipe(webpack({
@@ -146,10 +158,10 @@ export const buildProdJs = () => {
               }
             }
           },
-          {
-            test: require.resolve('wow.js/dist/wow.js'),
-            loader: 'exports?this.WOW'
-          }
+          // {
+          //   test: require.resolve('wow.js/dist/wow.js'),
+          //   loader: 'exports?this.WOW'
+          // }
         ]
       }
     }))
@@ -178,12 +190,15 @@ export const clean = () => del(path.clean);
 export const watchFiles = () => {
   gulp.watch([path.watch.html], html);
   gulp.watch([path.watch.css], css);
-  gulp.watch([path.watch.js], buildJs);
+  // gulp.watch([path.watch.js], buildJs);
+  gulp.watch([path.watch.js], buildProdJs);
+  gulp.watch([path.watch.php], php);
   gulp.watch([path.watch.images], img);
   gulp.watch([path.watch.fonts], fonts);
 };
 
-const build = gulp.series(clean, gulp.parallel(html, css, buildJs, img, fonts));
+// const build = gulp.series(clean, gulp.parallel(html, css, buildJs, php, img, fonts));
+const build = gulp.series(clean, gulp.parallel(html, css, buildProdJs, php, img, fonts));
 const watch = gulp.parallel(build, watchFiles, browserSync, browserSyncReload);
 /*
  * Export a default task
